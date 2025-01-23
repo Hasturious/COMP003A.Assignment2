@@ -1,4 +1,9 @@
-﻿namespace COMP003A.Assignment2
+﻿//Author: Jean Bryant Figueroa
+//Course: COMP003A
+//Faculty: Johnathan Cruz
+//Purpose: Assignment 2. A program calculating discounts for different users
+
+namespace COMP003A.Assignment2
 {
     internal class Program
     {
@@ -9,6 +14,10 @@
             int userAge; //store age as an number
             double itemPrice; //store the product price
             bool isStudent; //true / false statement
+
+            string asteriskLine = "************************************************************";
+
+            Console.WriteLine(asteriskLine+"\n Welcome to the Discount Calculator"+"\n"+asteriskLine);
 
             Console.Write("What is your first name?: ");
             firstName = Console.ReadLine();
@@ -27,14 +36,19 @@
 
             int futureAge = userAge + 5; // adds 5 to user age
             bool isAdult = userAge >= 18; //checks if adult
-            bool isAdultStudent = isStudent && isAdult; //checks if both student and adult
-            /*
-            Console.WriteLine($"\nHello {userName}!"); //displays name
+            bool isSenior = userAge >= 60; //checks if senior
+            double studentDiscount = itemPrice * .9;
+            double seniorDiscount = itemPrice * .8;
+            
+            Console.WriteLine("\n\n\n"+asteriskLine);
+            Console.WriteLine($"Hello {firstName} {lastName}!"); //displays name
             Console.WriteLine($"You are current age {userAge} years old."); //displays age
-            Console.WriteLine("In five years you will be {futureAge}");
-            Console.WriteLine($"Are you 18 or older {isAdult}"); //displays if adult
-            Console.WriteLine($"Are you both a student and 18 or older? {isAdultStudent}"); //displays if adult and student
-            */
+            Console.WriteLine($"In five years you will be {futureAge}.");
+            Console.WriteLine($"Are you 18 or older {isAdult}."); //displays if adult
+            Console.WriteLine($"The original price of the item is {itemPrice}.");
+            Console.WriteLine($"As a student, your discounted price is {studentDiscount}.00.");
+            Console.WriteLine($"As a student, your discounted price is {seniorDiscount}.00.");
+            Console.WriteLine(asteriskLine);
         }
     }
 }
