@@ -17,23 +17,24 @@
             lastName = Console.ReadLine();
 
             Console.Write("How old are you?: ");
-            userAge = int.Console.ReadLine();
+            userAge = int.Parse(Console.ReadLine());
 
             Console.Write("What is the price of the item you're interested in?: ");
-            itemPrice = double.Console.ReadLine();
+            itemPrice = double.Parse(Console.ReadLine());
 
-            Console.Write("Are you a student?: ");
-            isStudent = bool.Console.ReadLine();
+            Console.Write("Are you a student? (true/false): ");
+            isStudent = bool.Parse(Console.ReadLine());
 
             int futureAge = userAge + 5; // adds 5 to user age
             bool isAdult = userAge >= 18; //checks if adult
             bool isAdultStudent = isStudent && isAdult; //checks if both student and adult
-
+            /*
             Console.WriteLine($"\nHello {userName}!"); //displays name
             Console.WriteLine($"You are current age {userAge} years old."); //displays age
             Console.WriteLine("In five years you will be {futureAge}");
             Console.WriteLine($"Are you 18 or older {isAdult}"); //displays if adult
             Console.WriteLine($"Are you both a student and 18 or older? {isAdultStudent}"); //displays if adult and student
+            */
         }
     }
 }
